@@ -1,0 +1,252 @@
+
+/* variables for frequently used values */
+:root {
+    --content_shadow: 5px 5px 5px var(--shadow-color);
+    --shadow-color: rgba(0, 50, 68, 0.5);
+    --transform-distance: translate(0px, -5px);
+}
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* allows page to scroll smoothly when clicking links to specific content */
+html {
+    scroll-behavior: smooth;
+}
+
+/* text with links attached are always colored white */
+a:link, a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+/* any clickable element with a link will be highlighted */
+a:hover {
+    filter: brightness(150%);
+}
+
+img {
+    height: auto;
+    width: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../assets/white_light_blue_background.png");
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+}
+
+/* base style for page elements */
+.content_holder {
+    background: rgba(0, 183, 255, 0.40);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-style: ridge;
+    border-color: white;
+    border-radius: 20px;
+    box-shadow: var(--content_shadow);
+}
+
+/* used to style content with base border only */
+.content_border {
+    border-style: ridge;
+    border-color: white;
+    border-radius: 20px;
+    box-shadow: var(--content_shadow);
+}
+
+/* styling the elements presenting the header and nav bar */
+header {
+    margin: 5px 0px;
+}
+
+header section #nav_bar {
+    display: flex;
+}
+
+header section #nav_bar p {
+    padding: 10px;
+
+    font-size: 150%;
+    font-weight: 900;
+
+    color: white;
+
+    transition: transform .1s ease-out;
+}
+
+#nav_bar p:hover {
+    transform: var(--transform-distance);
+    filter: brightness(150%);
+}
+
+header #logo {
+    font-size: 200%;
+    font-weight: 900;
+
+    color:white;
+}
+
+/* styling the elements presenting the introduction and image */
+#landing_page {
+    margin: 5px 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#landing_page #introduction {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    transition: transform .1s ease-out;
+}
+
+#landing_page #introduction:hover {
+    transform: var(--transform-distance);
+}
+
+#landing_page #introduction p {
+    width: 500px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+
+    font-size: 24px;
+    line-height: 40px;
+    color: white;
+    text-align: justify;
+
+    display: flex;
+    align-items: center;
+}
+
+#landing_page #landing_image  {
+    margin: 50px;
+
+    display: flex;
+    justify-content: end;
+}
+
+#landing_image img {
+    height: 75%;
+    width: 75%;
+
+    border-style: ridge;
+    border-radius: 20px;
+    box-shadow: var(--content_shadow);
+}
+
+/* styling the elements presenting past experience */
+#past_experience {
+    margin: 5px 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#past_experience .content_box {
+    width: 400px;
+
+    margin: 20px;
+
+    border-style: ridge;
+    border-color: white;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: var(--content_shadow);
+
+    transition: transform .1s ease-out;
+
+    background-image: url("../assets/binary.png");
+    background-position: 200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#past_experience .content_box:hover {
+    transform: var(--transform-distance);
+    filter: brightness(150%);
+}
+
+#past_experience .title_box {
+    font-size: 200%;
+    font-weight: bold;
+    margin-left: 10px;
+
+    color: white;
+}
+
+#past_experience .experience_info {
+    font-size: 100%;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 200px;
+
+    background-color: white;
+
+    color:black;
+}
+
+/* styling the elements presenting the footer and contact information */
+footer {
+    margin:5px 0px;
+}
+
+footer #footer_text {
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+
+    color:white;
+}
+
+footer #scroll_to_top_button {
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+
+    color:white;
+
+    transition: transform .1s ease-out;
+}
+
+footer #scroll_to_top_button:hover {
+    transform: var(--transform-distance);
+    filter: brightness(150%);
+}
+
+footer #scroll_to_top_button p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ensures elements remain full on screen in as full view as possible */
+@media screen and (max-width: 768px) {
+    header, #past_experience {
+      flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #landing_page {
+      flex-direction: column;
+    }
+
+    #landing_page #landing_image  {
+        justify-content: center;
+    }
+}
