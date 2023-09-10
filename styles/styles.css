@@ -52,7 +52,7 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    border-style: ridge;
+    border-style: solid;
     border-color: white;
     border-radius: 20px;
     box-shadow: var(--content_shadow);
@@ -60,7 +60,7 @@ body {
 
 /* used to style content with base border only */
 .content_border {
-    border-style: ridge;
+    border-style: solid;
     border-color: white;
     border-radius: 20px;
     box-shadow: var(--content_shadow);
@@ -144,7 +144,6 @@ header #logo {
     height: 75%;
     width: 75%;
 
-    border-style: ridge;
     border-radius: 20px;
     box-shadow: var(--content_shadow);
 }
@@ -164,7 +163,7 @@ header #logo {
 
     margin: 20px;
 
-    border-style: ridge;
+    border-style: solid;
     border-color: white;
     border-radius: 0px 20px 20px 0px;
     box-shadow: var(--content_shadow);
